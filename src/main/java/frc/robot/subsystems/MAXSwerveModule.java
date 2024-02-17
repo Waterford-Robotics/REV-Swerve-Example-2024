@@ -1,4 +1,7 @@
-// Imports random stuff
+// Copyright (c) FIRST and other WPILib contributors.
+// Open Source Software; you can modify and/or share it under the terms of
+// the WPILib BSD license file in the root directory of this project.
+
 package frc.robot.subsystems;
 
 import com.revrobotics.AbsoluteEncoder;
@@ -13,7 +16,7 @@ import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import frc.robot.Constants.ModuleConstants;
 
-// MAX Swerve Module Class, iykyk
+// MAX Swerve Module Class
 public class MAXSwerveModule {
     
     // Motors, Encoders, PID for the driving and turning motors <3
@@ -133,7 +136,7 @@ public class MAXSwerveModule {
         m_turningPIDController.setReference(optimizedDesiredState.angle.getRadians(), CANSparkMax.ControlType.kPosition);
 
         // Sets the corrected desired state as the new desired state
-        m_desiredState = desiredState;
+        m_desiredSwerveModuleState = desiredState;
     }
 
     // Zeros all encoders on SwerveModule
